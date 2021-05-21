@@ -1,6 +1,5 @@
 import requests,logging
-from MarketData import MarketData
-class EquitySMEMarket(MarketData):
+class EquitySMEMarket:
 	def __init__(self,timeout: int=5):
 		super().__init__(timeout)
 		self._EquityBaseURL='https://www.nseindia.com/api/equity-stockIndices'

@@ -1,6 +1,5 @@
 import requests,logging,json
-from MarketData import MarketData
-class Derivatives(MarketData):
+class Derivatives:
 	def __init__(self,timeout: int=5):
 		super().__init__(timeout)
 		self._EquityDerivatives='https://www.nseindia.com/api/liveEquity-derivatives'
