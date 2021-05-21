@@ -1,0 +1,37 @@
+{
+  "DERIVATIVESMARKET": {
+    "TOP20CONTRACTS": "top20_contracts",
+    "STOCKFUTURES": "stock_fut",
+    "STOCKOPTIONS": "stock_opt",
+    "TOP20SPREADCONTRACTS": "top20_spread_contracts",
+    "NIFTY50FUTURES": "nse50_fut",
+    "NIFTY50OPTIONS": "nse50_opt",
+    "NIFTYBANKFUTURES": "nifty_bank_fut",
+    "NIFTYBANKOPTIONS": "nifty_bank_opt",
+    "NIFTYFINANCIALFUTURES": "finnifty_fut",
+    "NIFTYFINANCIALOPTIONS": "finnifty_opt",
+    "ALLINRCONTRACTS": {"index": "live_market_currency", "key" : "INR"},
+  	"ALLCROSSCURRENCYCONTRACTS" : {"index" : "=ive_market_currency", "key" :"NIC"},
+  	"ALLSPREADCONTRACTS" : {"index" : "live_market_currency_spread"},
+  	"ALLCOMMODITYCONTRACTS" : "liveCommodity-derivatives",
+  	"AGRICONTRACTS": "liveCommodity-derivatives/agri",
+  	"BASEMETALCONTRACTS": "liveCommodity-derivatives/metals",
+  	"BULLIONCONTRACTS": "liveCommodity-derivatives/bullion",
+  	"ENERGYCONTRACTS": "liveCommodity-derivatives/energy",
+  	"GOVTSECFUTURES" : {"index":"nbf","key":"FUTIRC"},
+  	"GOVTSECOPTS": {"index": "nbf","key" :"OPTIRC"},
+  	"91TDAYBILLFUTURES" : {"index" : "nbf","key": "FUTIRT"},
+  	"OVERNIGHTMIBORFUTURES" : {"index": "nbf","key" : "MIBOR"},
+  	"GSECSPREADCONTRACTS": {"index" : "spread"}
+  },
+  "FIXEDINCOMEDEBTMARKET":{
+  	"BONDS" : {"type" : "bonds"},
+  	"GSEC" : {"type" : "GSEC"}
+  },
+  "PREOPENMARKET": {
+    "NIFTYBANK": "BANKNIFTY",
+    "NIFTY50": "NIFTY",
+    "EMERGE": "SME",
+    "SECURITIESINF&O": "FO"
+  }
+}
