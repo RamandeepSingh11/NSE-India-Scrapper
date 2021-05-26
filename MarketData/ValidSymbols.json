@@ -10,23 +10,97 @@
     "NIFTYBANKOPTIONS": "nifty_bank_opt",
     "NIFTYFINANCIALFUTURES": "finnifty_fut",
     "NIFTYFINANCIALOPTIONS": "finnifty_opt",
-    "ALLINRCONTRACTS": {"index": "live_market_currency", "key" : "INR"},
-  	"ALLCROSSCURRENCYCONTRACTS" : {"index" : "=ive_market_currency", "key" :"NIC"},
-  	"ALLSPREADCONTRACTS" : {"index" : "live_market_currency_spread"},
-  	"ALLCOMMODITYCONTRACTS" : "liveCommodity-derivatives",
-  	"AGRICONTRACTS": "liveCommodity-derivatives/agri",
-  	"BASEMETALCONTRACTS": "liveCommodity-derivatives/metals",
-  	"BULLIONCONTRACTS": "liveCommodity-derivatives/bullion",
-  	"ENERGYCONTRACTS": "liveCommodity-derivatives/energy",
-  	"GOVTSECFUTURES" : {"index":"nbf","key":"FUTIRC"},
-  	"GOVTSECOPTS": {"index": "nbf","key" :"OPTIRC"},
-  	"91TDAYBILLFUTURES" : {"index" : "nbf","key": "FUTIRT"},
-  	"OVERNIGHTMIBORFUTURES" : {"index": "nbf","key" : "MIBOR"},
-  	"GSECSPREADCONTRACTS": {"index" : "spread"}
+    "ALLINRCONTRACTS": {
+      "index": "live_market_currency",
+      "key": "INR"
+    },
+    "ALLCROSSCURRENCYCONTRACTS": {
+      "index": "=ive_market_currency",
+      "key": "NIC"
+    },
+    "ALLSPREADCONTRACTS": {
+      "index": "live_market_currency_spread"
+    },
+    "ALLCOMMODITYCONTRACTS": "liveCommodity-derivatives",
+    "AGRICONTRACTS": "liveCommodity-derivatives/agri",
+    "BASEMETALCONTRACTS": "liveCommodity-derivatives/metals",
+    "BULLIONCONTRACTS": "liveCommodity-derivatives/bullion",
+    "ENERGYCONTRACTS": "liveCommodity-derivatives/energy",
+    "GOVTSECFUTURES": {
+      "index": "nbf",
+      "key": "FUTIRC"
+    },
+    "GOVTSECOPTS": {
+      "index": "nbf",
+      "key": "OPTIRC"
+    },
+    "91TDAYBILLFUTURES": {
+      "index": "nbf",
+      "key": "FUTIRT"
+    },
+    "OVERNIGHTMIBORFUTURES": {
+      "index": "nbf",
+      "key": "MIBOR"
+    },
+    "GSECSPREADCONTRACTS": {
+      "index": "spread"
+    }
   },
-  "FIXEDINCOMEDEBTMARKET":{
-  	"BONDS" : {"type" : "bonds"},
-  	"GSEC" : {"type" : "GSEC"}
+  "EquitySMEMarket": {
+    "NIFTY_50": "NIFTY 50",
+    "NIFTY_NEXT_50": "NIFTY NEXT 50",
+    "NIFTY_MIDCAP_50": "NIFTY MIDCAP 50",
+    "NIFTY_MIDCAP_100": "NIFTY MIDCAP 100",
+    "NIFTY_MIDCAP_150": "NIFTY MIDCAP 150",
+    "NIFTY_SMALLCAP_50": "NIFTY SMALLCAP 50",
+    "NIFTY_SMALLCAP_100": "NIFTY SMALLCAP 100",
+    "NIFTY_SMALLCAP_250": "NIFTY SMALLCAP 250",
+    "NIFTY_MIDSMALLCAP_400": "NIFTY MIDSMALLCAP 400",
+    "NIFTY_100": "NIFTY 100",
+    "NIFTY_200": "NIFTY 200",
+    "NIFTY_AUTO": "NIFTY AUTO",
+    "NIFTY_BANK": "NIFTY BANK",
+    "NIFTY_ENERGY": "NIFTY ENERGY",
+    "NIFTY_FINANCIAL_SERVICES": "NIFTY FINANCIAL SERVICES",
+    "NIFTY_FINANCIAL_SERVICES_25/50": "NIFTY FINANCIAL SERVICES 25/50",
+    "NIFTY_FMCG": "NIFTY FMCG",
+    "NIFTY_IT": "NIFTY IT",
+    "NIFTY_MEDIA": "NIFTY MEDIA",
+    "NIFTY_METAL": "NIFTY METAL",
+    "NIFTY_PHARMA": "NIFTY PHARMA",
+    "NIFTY_PSU_BANK": "NIFTY PSU BANK",
+    "NIFTY_REALTY": "NIFTY REALTY",
+    "NIFTY_PRIVATE_BANK": "NIFTY PRIVATE BANK",
+    "NIFTY_COMMODITIES": "NIFTY COMMODITIES",
+    "NIFTY_INDIA_CONSUMPTION": "NIFTY INDIA CONSUMPTION",
+    "NIFTY_CPSE": "NIFTY CPSE",
+    "NIFTY_INFRASTRUCTURE": "NIFTY INFRASTRUCTURE",
+    "NIFTY_MNC": "NIFTY MNC",
+    "NIFTY_GROWTH_SECTORS_15": "NIFTY GROWTH SECTORS 15",
+    "NIFTY_PSE": "NIFTY PSE",
+    "NIFTY_SERVICES_SECTOR": "NIFTY SERVICES SECTOR",
+    "NIFTY100_LIQUID_15": "NIFTY100 LIQUID 15",
+    "NIFTY_MIDCAP_LIQUID_15": "NIFTY MIDCAP LIQUID 15",
+    "NIFTY_DIVIDEND_OPPTS_50": "NIFTY DIVIDEND OPPORTUNITIES 50",
+    "NIFTY50_VALUE_20": "NIFTY50 VALUE 20",
+    "NIFTY100_QUALITY_30": "NIFTY100 QUALITY 30",
+    "NIFTY50_EQUAL_WEIGHT": "NIFTY50 EQUAL WEIGHT",
+    "NIFTY100_EQUAL_WEIGHT": "NIFTY100 EQUAL WEIGHT",
+    "NIFTY100_LOW_VOLATILITY_30": "NIFTY100 LOW VOLATILITY 30",
+    "NIFTY_ALPHA_50": "NIFTY ALPHA 50",
+    "NIFTY200_QUALITY_30": "NIFTY200 QUALITY 30",
+    "NIFTY_ALPHA_LOW-VOLATILITY_30": "NIFTY ALPHA LOW-VOLATILITY 30",
+    "NIFTY200_MOMENTUM_30": "NIFTY200 MOMENTUM 30",
+    "Securities_in_F&O": "Securities in F&O",
+    "Permitted_to_Trade": "Permitted to Trade"
+  },
+  "FIXEDINCOMEDEBTMARKET": {
+    "BONDS": {
+      "type": "bonds"
+    },
+    "GSEC": {
+      "type": "GSEC"
+    }
   },
   "PREOPENMARKET": {
     "NIFTYBANK": "BANKNIFTY",

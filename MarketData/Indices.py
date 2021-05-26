@@ -1,4 +1,4 @@
-from MarketData import MarketData
+from .MarketData import MarketData
 class Indices(MarketData):
 	def __init__(self,timeout: int=5):
 		super().__init__(timeout)

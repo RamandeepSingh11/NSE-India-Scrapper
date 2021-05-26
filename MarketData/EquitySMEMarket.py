@@ -1,11 +1,15 @@
 import requests,logging
-class EquitySMEMarket:
+from .MarketData import MarketData
+class EquitySMEMarket(MarketData):
 	def __init__(self,timeout: int=5):
 		super().__init__(timeout)
 		self._EquityBaseURL='https://www.nseindia.com/api/equity-stockIndices'
 		self._SGBBaseURL='https://www.nseindia.com/api/sovereign-gold-bonds'
 		self._ExchangeTradeFundsURL="https://www.nseindia.com/api/etf"
 		self._SMEMarketBaseURL="https://www.nseindia.com/api/live-analysis-emerge"
+		x=json.load(open('MarketData/ValidSymbols.json'))
+		for key in x['EquitySMEMarket']:
+			setattr(self,key,x['EquitySMEMarket'][key])
 	def EquityMarketWatch(self,Indice: str)-> dict:
 		Data=self._GrabData(self._EquityBaseURL,{'index' : Indice})
 		#Deleting Uncesseary Data.
@@ -25,7 +29,7 @@ class EquitySMEMarket:
 				Data['data'][i].pop('meta')
 		return Data
 if __name__=='__main__':
-	logging.getLogger('EquityMarketWatch').info(EquitySMEMarket().EquityMarketWatch('NIFTY 50'))
-	logging.getLogger('SGBMarketWatch').info(EquitySMEMarket().SGBMarketWatch())
-	logging.getLogger('ExchangeTradeFundsWatch').info(EquitySMEMarket().ExchangeTradeFundsWatch())
-	logging.getLogger('SMEMarket').info(EquitySMEMarket().SMEMarketWatch())
+	# logging.getLogger('EquityMarketWatch').info(EquitySMEMarket().EquityMarketWatch('NIFTY 50'))
+	# logging.getLogger('SGBMarketWatch').info(EquitySMEMarket().SGBMarketWatch())
+	# logging.getLogger('ExchangeTradeFundsWatch').info(EquitySMEMarket().ExchangeTradeFundsWatch())
+	# logging.getLogger('SMEMarket').info(EquitySMEMarket().SMEMarketWatch())
