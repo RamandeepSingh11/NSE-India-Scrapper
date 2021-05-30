@@ -1,2 +1,2 @@
-**/Tests/
-**/__pycache__/
+/Tests
+/NSE/__pycache__
