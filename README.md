@@ -484,8 +484,8 @@ Instance=Derivatives(10)
 The EquityDerivatives method takes Symbol argument
 
 Possible Values for Symbol Argument is in format Derivatives().x where x can be:
-TOP20CONTRACTS,STOCKFUTURES,STOCKOPTIONS,TOP20SPREADCONTRACTS,NIFTY50FUTURES,NIFTY50OPTIONS,NIFTYBANKFUTURES,
-NIFTYBANKOPTIONS,NIFTYFINANCIALFUTURES,NIFTYFINANCIALOPTIONS
+TOP20CONTRACTS ,STOCKFUTURES ,STOCKOPTIONS ,TOP20SPREADCONTRACTS ,NIFTY50FUTURES ,NIFTY50OPTIONS ,NIFTYBANKFUTURES,
+NIFTYBANKOPTIONS ,NIFTYFINANCIALFUTURES ,NIFTYFINANCIALOPTIONS
 
 ```python
 Data=Instance.EquityDerivatives(Instance.TOP20CONTRACTS)
@@ -537,7 +537,7 @@ print(Data)
 CurrencyDerivatives method takes Symbol as a argument.
 
 Possible Values for Symbol argument is in format Derivatives().x where x can be:
-ALLINRCONTRACTS,ALLCROSSCURRENCYCONTRACTS,ALLSPREADCONTRACTS
+ALLINRCONTRACTS ,ALLCROSSCURRENCYCONTRACTS ,ALLSPREADCONTRACTS
 
 ```python
 Data=Instance.CurrencyDerivatives(Instance.ALLINRCONTRACTS)
@@ -594,7 +594,7 @@ print(Data)
 CommodityDerivatives method takes Symbol Argument.
 
 Possible Values for Symbol argument is in format Derivatives().x where x can be:
-ALLCOMMODITYCONTRACTS,AGRICONTRACTS,BASEMETALCONTRACTS,BULLIONCONTRACTS,ENERGYCONTRACTS
+ALLCOMMODITYCONTRACTS ,AGRICONTRACTS ,BASEMETALCONTRACTS ,BULLIONCONTRACTS ,ENERGYCONTRACTS
 
 ```python
 Data=Instance.CommodityDerivatives(Instance.ALLCOMMODITYCONTRACTS)
@@ -646,7 +646,7 @@ print(Data)
 InterestRateDerivatives method takes Symbol Argument.
 
 Possible Values for Symbol argument is in format Derivatives().x where x can be:
-GOVTSECFUTURES,GOVTSECOPTS,TDAY91BILLFUTURES,OVERNIGHTMIBORFUTURES,GSECSPREADCONTRACTS
+GOVTSECFUTURES ,GOVTSECOPTS ,TDAY91BILLFUTURES ,OVERNIGHTMIBORFUTURES ,GSECSPREADCONTRACTS
 
 ```python
 Data=Instance.InterestRateDerivatives(Instance.TDAY91BILLFUTURES)
@@ -1033,7 +1033,7 @@ Instance=PreOpenMarket(10)
 
 #### Pre Open Market
 PreOpenMarket Method takes Symbol as argument in format PreOpenMarket().x where x is:
-NIFTYBANK,NIFTY50,EMERGE,SECURITIESINFO
+NIFTYBANK ,NIFTY50 ,EMERGE ,SECURITIESINFO
 ```python
 Data=Instance.PreOpenMarket(Instance.SECURITIESINFO)
 print(Data)
