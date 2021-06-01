@@ -14,35 +14,40 @@ class Companies(MarketData):
 		return self._GrabData(self._baseURL,{'symbol': Symbol})
 	def GetTradeInfo(self,Symbol: str):
 		return self._GrabData(self._baseURL,{'symbol': Symbol,'section': 'trade_info'})
-	def _CreateURL(self,Symbol,Series,start: str=None,end: str=None,TimePeriod: str='',Period: bool=True)-> str:
+	def _CreateURL(self,Symbol,Series,Start: str=None,End: str=None,TimePeriod: str='',Period: bool=True)-> str:
 		Series=','.join(Series)
 		url=self._historicalDataBaseURL+fr'?symbol={Symbol}&series=[{Series}]'
 		if(Period):
-			end=datetime.datetime.now()
-			start=(end-datetime.timedelta(**self._validPeriodInputs[TimePeriod])).strftime(self.DateTimeFormat)
-			end=end.strftime(self.DateTimeFormat)
-		url+=rf'&from={start}&to={end}'
+			End=datetime.datetime.now()
+			Start=(End-datetime.timedelta(**self._validPeriodInputs[TimePeriod])).strftime(self.DateTimeFormat)
+			End=End.strftime(self.DateTimeFormat)
+		url+=rf'&from={Start}&to={End}'
 		return url
-	#Can Take Start and end as either a datetime object or a string.
-	def HistoricalData(self,Symbol: str,Series: list[str],TimePeriod: str='',start=None,end=None):
-		if(not TimePeriod and (not start or not end)):
-			raise Exception('Please Enter a Valid TimePeriod or Starting Date')
-		if(start):
-			if(type(start)==datetime.datetime):
-				start=start.strftime(self.DateTimeFormat)
-				end=end.strftime(self.DateTimeFormat)
-			elif(type(start)==str):
+	#Can Take Start and End as either a datetime object or a string.
+	def HistoricalData(self,Symbol: str,Series: list[str],TimePeriod: str='',Start=None,End=None):
+		if(type(Series)!=list):
+			raise ValueError('Please Enter a List type for Series.')
+		if(not TimePeriod and (not Start or not End) or (type(TimePeriod)!=str )):
+			raise ValueError('Please Enter a Valid TimePeriod or Starting Date')
+		if(Start):
+			if(type(Start)==datetime.datetime and type(End)==datetime.datetime):
+				Start=Start.strftime(self.DateTimeFormat)
+				End=End.strftime(self.DateTimeFormat)
+			elif(type(Start)==str and type(End)==str):
 				try:
-					datetime.datetime.strptime(start,self.DateTimeFormat)
-					datetime.datetime.strptime(end,self.DateTimeFormat)
+					datetime.datetime.strptime(Start,self.DateTimeFormat)
+					datetime.datetime.strptime(End,self.DateTimeFormat)
 				except ValueError:
-					raise ValueError(f'Incorrect DateTime Format, Should be {self.DateTimeFormat}')
+					raise ValueError(f'Incorrect DateTime Value/Format,\n Accepted Values are Str and Datetime object\n Format for string Should be {self.DateTimeFormat}')
 			else:
-				raise Exception('Bad Start and End Value.')
-			return self._GrabData(self._CreateURL(Symbol,Series,start=start,end=end,Period=False))
+				raise Exception('Bad Start or End Value.')
+			res=self._GrabData(self._CreateURL(Symbol,Series,Start=Start,End=End,Period=False))
 		else:
 			if(TimePeriod not in self._validPeriodInputs):
 				raise ValueError(f'Incorrect TimePeriod Value, Possible Values are: {list(self._validPeriodInputs.keys())}')
-			return self._GrabData(self._CreateURL(Symbol,Series,TimePeriod=TimePeriod))
+			res=self._GrabData(self._CreateURL(Symbol,Series,TimePeriod=TimePeriod))
+		if(res.get('error')):
+			raise Exception(res['showMessage'])
+		return res
 if __name__=='__main__':
 	open('NSE/ValidSymbols.json')

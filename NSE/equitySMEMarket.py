@@ -11,6 +11,8 @@ class EquitySMEMarket(MarketData):
 		for key in ValidSymbols['EquitySMEMarket']:
 			setattr(self,key,ValidSymbols['EquitySMEMarket'][key])
 	def EquityMarketWatch(self,Indice: str)-> dict:
+		if(type(Indice)!=str):
+			raise ValueError('Please Enter a Valid Indice.')
 		Data=self._GrabData(self._EquityBaseURL,{'index' : Indice})
 		#Deleting Uncesseary Data.
 		Data.pop('metadata')
@@ -33,3 +35,4 @@ if __name__=='__main__':
 	# logging.getLogger('SGBMarketWatch').info(EquitySMEMarket().SGBMarketWatch())
 	# logging.getLogger('ExchangeTradeFundsWatch').info(EquitySMEMarket().ExchangeTradeFundsWatch())
 	# logging.getLogger('SMEMarket').info(EquitySMEMarket().SMEMarketWatch())
+	pass
