@@ -8,8 +8,6 @@ class EquitySMEMarket(MarketData):
 		self._SGBBaseURL='https://www.nseindia.com/api/sovereign-gold-bonds'
 		self._ExchangeTradeFundsURL="https://www.nseindia.com/api/etf"
 		self._SMEMarketBaseURL="https://www.nseindia.com/api/live-analysis-emerge"
-		for key in ValidSymbols['EquitySMEMarket']:
-			setattr(self,key,ValidSymbols['EquitySMEMarket'][key])
 	def EquityMarketWatch(self,Indice: str)-> dict:
 		if(type(Indice)!=str):
 			raise ValueError('Please Enter a Valid Indice.')

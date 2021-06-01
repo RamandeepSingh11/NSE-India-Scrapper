@@ -39,7 +39,7 @@
       "index": "nbf",
       "key": "OPTIRC"
     },
-    "91TDAYBILLFUTURES": {
+    "TDAY91BILLFUTURES": {
       "index": "nbf",
       "key": "FUTIRT"
     },
@@ -111,6 +111,6 @@
     "NIFTYBANK": "BANKNIFTY",
     "NIFTY50": "NIFTY",
     "EMERGE": "SME",
-    "SECURITIESINF&O": "FO"
+    "SECURITIESINFO": "FO"
   }
 }
