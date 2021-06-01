@@ -20,9 +20,10 @@ print(Data)
 Input can Only be String and Symbols of Different Companies can be found on NSEINDIA.
 A Example for "RBLBANK" is: 
 
-<img src="https://imgur.com/SqO844U">
+<a href="https://www.nseindia.com/"><img src="https://imgur.com/SqO844U.png"></a>
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "info": {
@@ -158,15 +159,18 @@ A Example for "RBLBANK" is:
   }
 }
 ```
-<details>
+</details>
+
 #### Get Trade Info of a Company
+
 The Method takes Symbol of Company as String
 ```python
 Data=Instance.GetTradeInfo('RBLBANK')
 print(Data)
 ```
 <details>
-	<Summary>Example Result<Summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "noBlockDeals": true,
@@ -250,7 +254,8 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
+
 #### Get Historical Data of Company
 This Method takes can Take Two Types of Input for Time Periods. Exact Dates or Time Periods(for ex: 1day,1week etc).
 ##### Example 1
@@ -264,7 +269,8 @@ Data=Instance.HistoricalData('RBLBANK',[Instance.EQ,Instance.RL],'1d')
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -332,7 +338,8 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
+
 ##### Example 2
 Start and end Date.
 Input:
@@ -344,7 +351,8 @@ Data=Instance.HistoricalData('RBLBANK',[Instance.EQ,Instance.RL],Start='20-05-20
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -463,7 +471,8 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
+
 ## Derivatives
 The Derivatives Class takes a timeout argument by default it is set to 5 seconds.
 ```python
@@ -483,7 +492,8 @@ Data=Instance.EquityDerivatives(Instance.TOP20CONTRACTS)
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -521,7 +531,8 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
+
 #### Currency Derivatives
 CurrencyDerivatives method takes Symbol as a argument.
 
@@ -533,7 +544,8 @@ Data=Instance.CurrencyDerivatives(Instance.ALLINRCONTRACTS)
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "timestamp": "01-Jun-2021 17:00:00",
@@ -576,7 +588,7 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
 
 #### Commodity Derivatives
 CommodityDerivatives method takes Symbol Argument.
@@ -589,7 +601,8 @@ Data=Instance.CommodityDerivatives(Instance.ALLCOMMODITYCONTRACTS)
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -627,7 +640,8 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
+
 #### Interest Rate Derivatives
 InterestRateDerivatives method takes Symbol Argument.
 
@@ -639,7 +653,8 @@ Data=Instance.InterestRateDerivatives(Instance.TDAY91BILLFUTURES)
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -678,7 +693,7 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
 
 ## Equity SME Market
 EquitySMEMarket Class takes Timeout Argument as input by Default it is 5seconds.
@@ -692,7 +707,7 @@ EquityMarketWatch Method takes Indice(String) as Argument
 Input can Only be String and all Possible Indices Can be found on NSEINDIA.
 For Example: 
 
-<img src="https://imgur.com/Wbt0Crl">
+<img src="https://imgur.com/Wbt0Crl.png">
 
 ```python
 Data=Instance.EquityMarketWatch("NIFTY FINANCIAL SERVICES 25/50")
@@ -700,7 +715,8 @@ print(Data)
 ```
 
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "name": "NIFTY FINANCIAL SERVICES 25/50",
@@ -751,7 +767,7 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
 
 #### SGB Market Watch
 
@@ -761,7 +777,8 @@ print(Data)
 ```
 
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "timestamp": "01-Jun-2021 16:00:00",
@@ -814,7 +831,7 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
 
 #### Exchange Trade Funds Watch
 
@@ -824,7 +841,8 @@ print(Data)
 ```
 
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "timestamp": "01-Jun-2021 16:00:00",
@@ -877,7 +895,7 @@ print(Data)
   }
 }
 ```
-<details>
+</details>
 
 #### SME Market Watch
 
@@ -887,7 +905,8 @@ print(Data)
 ```
 
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -935,8 +954,9 @@ print(Data)
   }
 }
 ```
-<details>
-## Indices Market Watch:
+</details>
+
+## Indices Market Watch
 Indices Class Takes timeout argument by Default it is set to 5seconds.
 
 ```python
@@ -950,7 +970,8 @@ Data=Instance.IndicesMarketWatch()
 print(Data)
 ```
 <details>
-	<summary>Example Result<summmary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "data": [
@@ -1000,7 +1021,7 @@ print(Data)
   "date365dAgo": "29-May-2020"
 }
 ```
-<details>
+</details>
 
 ## Pre Open Market Watch
 PreOpenMarket Takes timeout as argument by default it is set to 5seconds
@@ -1018,7 +1039,8 @@ Data=Instance.PreOpenMarket(Instance.SECURITIESINFO)
 print(Data)
 ```
 <details>
-	<summary>Example Result<summary>
+	<summary>Example Result</summary>
+
 ```json
 {
   "declines": 11,
@@ -1115,4 +1137,4 @@ print(Data)
   "totalTradedVolume": 3455859
 }
 ```
-<details>
+</details>
