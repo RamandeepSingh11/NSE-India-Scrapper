@@ -1,5 +1,5 @@
 # [NSE-INDIA-API](https://github.com/GamesBond008/NSE-India-API)
-#### An Unofficial NSE India API That Scrapes Data From NSE India Without Selenium.
+#### An Unofficial NSE India Scraper That Scrapes Data From NSE India Without Selenium.
 ## Installing
 Just Clone The Repository and then in the Source Folder do
 ```bash
